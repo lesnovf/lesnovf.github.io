@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
-    <title>Unity WebGL Player | ARTest</title>
+    <title>Unity WebGL Player | Gazquestium</title>
     <link rel="stylesheet" href="TemplateData/style.css">
 
     <style>
@@ -35,10 +35,10 @@
 </head>
 <body>
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
-    <div id="startARDiv" class="ctaDiv">
-        <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-        <p style="text-align: center; width:60vw">This augmented reality experience requires access to your device's camera and motion sensors</p>
-        <button id="startARButton" style="display:none" onclick="StartAR()">ALLOW ACCESS</button>
+    <div id="startARDiv" class="ctaDiv" style=" background-color: #2355d7; ">
+        <select id="chooseCamSel" style="display: block;background-color: #d34a95;color: white;border-radius: 7px;" onchange="SelectCam()"></select>
+        <p style="text-align: center;width:60vw;color: white;">Выберите вашу камеру</p>
+        <button id="startARButton" style="background-color: #2355d7;display: block;border: 5px;border-style: groove;border-color: #d34a95;color: white;border-radius: 7px;" onclick="StartAR()">Подтвердить</button>
     </div>
     <!-- ENABLE THIS FOR WECHAT -->
     <!-- <div id="startWebcamManuallyDiv" style="display: none" class="ctaDiv">
@@ -90,9 +90,9 @@
                     frameworkUrl: "Build/lesnovf.github.io.framework.js",
                     codeUrl: "Build/lesnovf.github.io.wasm",
                     streamingAssetsUrl: "StreamingAssets",
-                    companyName: "DefaultCompany",
-                    productName: "ARTest",
-                    productVersion: "0.1",
+                    companyName: "Rise Dev Studio",
+                    productName: "Gazquestium",
+                    productVersion: "1",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
                     // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                     // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
