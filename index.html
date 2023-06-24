@@ -5,7 +5,6 @@
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
     <title>Unity WebGL Player | Gazquestium</title>
     <link rel="stylesheet" href="TemplateData/style.css">
-
     <style>
         html{
             height: -webkit-fill-available;
@@ -71,7 +70,6 @@
         .catch(error => {
             console.error("Failed to initialize world tracker. Are you missing opencv.js?");
             ShowError("Failed to initialize the experience.");
-
         });
     </script>
     <script src="Build/lesnovf.github.io.loader.js"></script>
@@ -121,7 +119,6 @@
             StartMotionSensors();
             loadingBar.style.display = "block";
         }
-
         window.WEBCAM_SETTINGS = {
             video: {
                 facingMode: "environment",
@@ -140,7 +137,6 @@
                 catch(err){
                     console.error("Webcam failed to start - ", err);
                     ShowError("Failed to start the experience. Webcam fafiled to start");
-
                 }
             }
             catch (err) {
@@ -149,7 +145,6 @@
                 ShowError("Failed to start the experience. Camera permission was denied");
             }           
         }
-
         async function LoadWebcams(){
             let backCams = [];
             let devices = await navigator.mediaDevices.enumerateDevices();
@@ -185,7 +180,6 @@
             //console.log(window.WEBCAM_SETTINGS);
             wTracker.WEBCAM_NAME = select.options[select.selectedIndex].innerHTML;
         }
-
         function StartMotionSensors(){
             window.wTracker.startAngles()
             .then(()=>{
@@ -194,15 +188,12 @@
             .catch(error=>{
                 console.error("Failed to start motion sensors - " + error);
                 ShowError("Failed to start the experience. " + error);
-
             });
         }
-
         function ShowError(error){
             document.getElementById("errorDiv").style.display = "flex";
             document.getElementById("errorText").innerHTML = error;
         }
-
         //ENABLE THIS FOR WECHAT
         // function StartCameraManually() {
         //     document.getElementById("startWebcamManuallyDiv").style.display = "none";
