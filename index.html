@@ -27,7 +27,7 @@
             right: 0;
             top: 0;
             bottom: 0;
-            background: #fffa;
+            background: #1919ef;
             z-index: 99;
         }
     </style>
@@ -41,11 +41,13 @@
 		<imagetarget id='rmn' src='targets/rmn.png'></imagetarget>
 		<imagetarget id='bear' src='targets/bear.png'></imagetarget>
 		<imagetarget id='photo_2023-06-24_10-20-07' src='targets/photo_2023-06-24_10-20-07.jpg'></imagetarget>
+		<imagetarget id='газпромтех' src='targets/ГазпромбанкТех синий.png'></imagetarget>
+		<imagetarget id='газпромбанк2' src='targets/image_2023-07-01_14-32-04.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <div id="startARDiv" class="ctaDiv">
         <select id="chooseCamSel" style="display: none;" onchange="SelectCam()"></select>
-        <p style="text-align: center; width:60vw;">В игре используется камера, поэтому устройство может запросить разрешение использовать камеру. Пожалуйста, дайте разрешение чтобы начать играть. </p>
+        <p style="text-align: center; width:60vw;">В игре используется камера, поэтому устройство может запросить разрешение использовать камеру.</p>
         <button id="startARButton" onclick="StartAR()" style="display:none">ПОДТВЕРЖДАЮ</button>
     </div>
     <!-- ENABLE THIS FOR WECHAT -->
@@ -93,9 +95,9 @@
                 
                 document.getElementById("startARDiv").style.display = "none";
                 createUnityInstance(document.querySelector("#unity-canvas"), {
-                    dataUrl: "Build/lesnovf.github.io.data",
-                    frameworkUrl: "Build/lesnovf.github.io.framework.js",
-                    codeUrl: "Build/lesnovf.github.io.wasm",
+                    dataUrl: "Build/lesnovf.github.io.data.br",
+                    frameworkUrl: "Build/lesnovf.github.io.framework.js.br",
+                    codeUrl: "Build/lesnovf.github.io.wasm.br",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "Rise Dev Studio",
                     productName: "Gazquestium",
