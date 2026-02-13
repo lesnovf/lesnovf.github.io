@@ -6,8 +6,7 @@
     <title>Unity Web Player | WebGLFactoryData</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <!-- ВАЖНО: добавлены все ID, которые ищет Vuplex -->
-    <canvas id="unity-canvas" id="unity-container" id="unityContainer" id="gameContainer" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
     <script src="Build/lesnovf.github.io.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -23,6 +22,7 @@
         canvas.style.position = "fixed";
 
         document.body.style.textAlign = "left";
+
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -34,6 +34,8 @@
         companyName: "DefaultCompany",
         productName: "WebGLFactoryData",
         productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
       }).catch((message) => {
         alert(message);
